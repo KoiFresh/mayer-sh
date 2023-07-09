@@ -3,15 +3,39 @@
 <html>
 
 <head>
-
 </head>
 
-
 <body>
+	<link rel="stylesheet" href="writer.css">
+	<script src="https://unpkg.com/htmx.org@1.9.2"></script>
+	<script defer>
+		const code = htmx.find(".code");
+		let index = 0;
+		for (const child of code.children) {
+			let chars = child.innerText.length;
+			child.style.setProperty("--chars", chars);
+			child.style.setProperty("--prev", index);
+			index += chars;
+		}
+	</script>
 	<style>
 		.code {
 			color: white;
 			white-space: nowrap;
+			font-family: monospace;
+			font-size: 14px;
+		}
+
+		.code nop_,
+		command_,
+		value_,
+		comment_,
+		param_ {
+			display: inline-block;
+		}
+
+		.code nop_ {
+			color: white;
 		}
 
 		.code command_ {
@@ -22,7 +46,7 @@
 			color: #c5947c;
 		}
 
-		.code option_ {
+		.code param_ {
 			color: #679ad1;
 		}
 
@@ -30,28 +54,36 @@
 			color: #70925a;
 		}
 	</style>
-	<code class="code">
+	<span class="code">
 		<comment_>#!/bin/bash</comment_><br />
 		<br />
-		<comment_>
-			# --------------------------------------------------------<br />
-			# Script: mayer.sh <br />
-			# Description: prints information about the author <br />
-			# Usage: ./mayer.sh <br />
-			# Author: Kai Mayer &lt;kai@mayer.sh&gt; <br />
-			# Version: 0.0.1 <br />
-			# Date: 2023-09-07 <br />
-			# -------------------------------------------------------- <br />
-		</comment_>
+		<comment_># --------------------------------------------------------</comment_><br />
+		<comment_># Script: mayer.sh</comment_><br />
+		<comment_># Description: prints information about the author</comment_><br />
+		<comment_># Usage: ./mayer.sh </comment_><br />
+		<comment_># Author: Kai Mayer &lt;kai@mayer.sh&gt;</comment_><br />
+		<comment_># Version: 0.0.1</comment_><br />
+		<comment_># Date: 2023-09-07</comment_><br />
+		<comment_># -------------------------------------------------------- </comment_><br />
 		<br />
-		<command_>echo</command_> <value_>"Willkommen auf meiner Website!"</value_><br />
-		<command_>curl</command_> <value_>https://mayer.sh/mayer.sh</value_> <param_>-o</param_> <value_>mayer.sh </value_> && <command_>bash</command_> <value_>./mayer.sh</value_><br />
+		<command_>echo</command_>
+		<value_>"Willkommen auf meiner Website!"</value_><br />
+		<command_>curl</command_>
+		<value_>https://mayer.sh/mayer.sh</value_>
+		<param_>-o</param_>
+		<value_>mayer.sh </value_>
+		<nop_>&&</nop_>
+		<command_>bash</command_>
+		<value_>./mayer.sh</value_><br />
 		<br />
 		<comment_># ...</comment_><br />
 		<br />
-		<command_>curl</command_> <value_>https://mayer.sh/kai@mayer.sh.txt</value_> <comment_># or as link: <a style="color: lightseagreen;" href="https://mayer.sh/kai@mayer.sh.txt">https://mayer.sh/kai@mayer.sh.txt</a></comment_><br />
+		<command_>curl</command_>
+		<value_>https://mayer.sh/kai@mayer.sh.txt</value_>
+		<comment_># or as link: <a style="color: lightseagreen;"
+				href="https://mayer.sh/kai@mayer.sh.txt">https://mayer.sh/kai@mayer.sh.txt</a></comment_><br />
 		<br />
-	</code>
+	</span>
 </body>
 
 </html>

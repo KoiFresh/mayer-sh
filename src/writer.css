@@ -1,0 +1,42 @@
+@keyframes cursor {
+	from {
+		color: white;
+	}
+
+	to {
+		color: white;
+	}
+
+	50% {
+		color: transparent;
+	}
+}
+
+nop_,
+comment_,
+value_,
+command_,
+param_ {
+	overflow: hidden;
+	width: 0;
+	/* animation: typing calc(var(--chars)*0.01s) linear forwards;*/
+
+	animation-name: typing;
+	-webkit-animation-name: typing;
+	animation-duration: calc(var(--chars)*0.01s);
+	-webkit-animation-duration: calc(var(--chars)*0.01s);
+	animation-delay: calc(var(--prev)*0.01s);
+	-webkit-animation-delay: calc(var(--prev)*0.01s);
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+	0% {
+		width: 0px;
+	}
+
+	100% {
+		width: calc(var(--chars) * 1ch);
+	}
+}
