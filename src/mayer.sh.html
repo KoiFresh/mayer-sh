@@ -1,22 +1,57 @@
-<code style="color: green;">#!/bin/bash</code>
+<!DOCTYPE html>
 
-<code style="color: green;"># --------------------------------------------------------
-# Script: mayer.sh
-# Description: prints useless information about the author
-# Usage: ./mayer.sh
-# Author: Kai Mayer &lt;kai@mayer.sh&gt;
-# Version: 0.0.1
-# Date: 2023-09-07
-# --------------------------------------------------------</code>
+<html>
 
-<code style="color: yellow;">echo </code><code style="color: orange;">"Willkommen auf meiner Website!"</code>
-<code style="color: yellow;">curl </code><code
-	style="color: orange;">https://mayer.sh/mayer.sh <code style="color: skyblue">-o </code><code
-	style="color: orange;">mayer.sh </code><code style="color: whitesmoke;">&& </code><code
-	style="color: yellow;">bash </code><code style="color: orange;">./mayer.sh</code>
+<head>
 
-<code style="color: green;"># ...</code>
+</head>
 
-<code style="color: yellow;">curl </code><code style="color: orange;">https://mayer.sh/kai@mayer.sh.asc </code><code
-	style="color: green"># or here: <a style="color: lightseagreen;" href="https://mayer.sh/kai@mayer.sh.asc">&lt;a href="https://mayer.sh/kai@mayer.sh.asc"&gt;&lt;/a&gt;</code>
-<br />
+
+<body>
+	<style>
+		.code {
+			color: white;
+			white-space: nowrap;
+		}
+
+		.code command_ {
+			color: yellow;
+		}
+
+		.code value_ {
+			color: orange;
+		}
+
+		.code option_ {
+			color: skyblue;
+		}
+
+		.code comment_ {
+			color: green;
+		}
+	</style>
+	<code class="code">
+		<comment_>#!/bin/bash</comment_><br />
+		<br />
+		<comment_>
+			# --------------------------------------------------------<br />
+			# Script: mayer.sh <br />
+			# Description: prints information about the author <br />
+			# Usage: ./mayer.sh <br />
+			# Author: Kai Mayer &lt;kai@mayer.sh&gt; <br />
+			# Version: 0.0.1 <br />
+			# Date: 2023-09-07 <br />
+			# -------------------------------------------------------- <br />
+		</comment_>
+		<br />
+		<command_>echo</command_> <value_>"Willkommen auf meiner Website!"</value_><br />
+		<command_>curl</command_> <value_>https://mayer.sh/mayer.sh</value_> <param_>-o</param_> <value_>mayer.sh </value_> && <command_>bash</command_> <value_>./mayer.sh</value_><br />
+		<br />
+		<comment_># ...</comment_><br />
+		<br />
+		<command_>curl</command_> <value_>https://mayer.sh/kai@mayer.sh.txt</value_> <comment_># or as link: <a style="color: lightseagreen;" href="https://mayer.sh/kai@mayer.sh.txt">https://mayer.sh/kai@mayer.sh.txt</a></comment_><br />
+		<br />
+	</code>
+</body>
+
+</html>
