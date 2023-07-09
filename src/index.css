@@ -18,10 +18,6 @@ content .window .editor {
 	overflow-x: auto;
 }
 
-content .window .editor .bash-script {
-	overflow-x: scroll;
-}
-
 content .window .header {
 	background-color: #323232;
 	padding: 0.2em 0em 0 0.4em;
