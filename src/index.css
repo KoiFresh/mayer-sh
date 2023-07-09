@@ -10,14 +10,13 @@
 
 .background::before {
 	content: "";
-	position: absolute;
+	position: fixed;
 	--size: calc(max(50vh, 50vw) * -1);
 	top: var(--size);
 	right: var(--size);
 	bottom: var(--size);
 	left: var(--size);
 	background-image: linear-gradient(rgb(25, 25, 220), rgb(238, 56, 238));
-	background-size: 200vw 200vh;
 	z-index: -1;
 	animation: backg 30s linear infinite;
 }
