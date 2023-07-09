@@ -1,0 +1,15 @@
+{
+  "name": "mayer-sh",
+  "version": "0.0.1",
+  "description": "mayer.sh homepage",
+  "repository": "https://github.com/KoiFresh/mayer-sh",
+  "author": "kai@mayer.sh",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "http-server ./src --port 9000 "
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
