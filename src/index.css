@@ -1,14 +1,4 @@
 .background {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	z-index: -1;
-}
-
-.background::before {
 	content: "";
 	position: fixed;
 	--size: calc(max(50vh, 50vw) * -1);
@@ -17,9 +7,8 @@
 	bottom: var(--size);
 	left: var(--size);
 	background-color: #f786f7;
-	background-image: linear-gradient(#4a87ea, #f786f7, #f7aa79);
 	z-index: -1;
-	animation: backg 30s linear infinite;
+	animation: backg 40s linear infinite;
 }
 
 @keyframes backg {
