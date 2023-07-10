@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+	<link rel="stylesheet" href="mayer.sh.css">
+	<script src="https://unpkg.com/htmx.org@1.9.2"></script>
+	<script defer>
+		const code = htmx.find(".code");
+		let index = 0;
+		for (const child of code.children) {
+			let chars = child.innerText.length;
+			child.style.setProperty("--chars", chars);
+			child.style.setProperty("--prev", index);
+			index += chars;
+		}
+	</script>
+	<style>
+		.code {
+			color: white;
+			white-space: nowrap;
+			font-family: monospace;
+			font-size: 14px;
+		}
+
+		.code nop_,
+		command_,
+		value_,
+		comment_,
+		param_ {
+			display: inline-block;
+		}
+
+		.code nop_ {
+			color: white;
+		}
+
+		.code command_ {
+			color: #d7d7ab;
+		}
+
+		.code value_ {
+			color: #c5947c;
+		}
+
+		.code param_ {
+			color: #679ad1;
+		}
+
+		.code comment_ {
+			color: #70925a;
+		}
+	</style>
+	<span class="code">
+		<comment_>#!/bin/bash</comment_><br />
+		<br />
+		<comment_># --------------------------------------------------------</comment_><br />
+		<comment_># Script: mayer.sh</comment_><br />
+		<comment_># Description: prints information about the author</comment_><br />
+		<comment_># Usage: ./mayer.sh </comment_><br />
+		<comment_># Author: Kai Mayer &lt;kai@mayer.sh&gt;</comment_><br />
+		<comment_># Version: 0.0.1</comment_><br />
+		<comment_># Date: 2023-09-07</comment_><br />
+		<comment_># -------------------------------------------------------- </comment_><br />
+		<br />
+		<command_>echo</command_>
+		<value_>"Willkommen auf meiner Website!"</value_><br />
+		<command_>curl</command_>
+		<value_>https://mayer.sh/mayer.sh</value_>
+		<param_>-o</param_>
+		<value_>mayer.sh </value_>
+		<nop_>&&</nop_>
+		<command_>bash</command_>
+		<value_>./mayer.sh</value_><br />
+		<br />
+		<comment_># ...</comment_><br />
+		<br />
+	</span>
+</body>
+
+</html>
