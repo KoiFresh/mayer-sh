@@ -1,51 +1,14 @@
-<!DOCTYPE html>
-<html lang="de">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>mayer.sh</title>
-	<link rel="stylesheet" href="index.css">
-	<link rel="icon" type="image/x-icoin" href="/favicon.ico">
-	<script src="https://unpkg.com/htmx.org@1.9.2"></script>
-	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-	<script defer src="index.js"></script>
-</head>
-
-<body>
-	<div class="background"></div>
-	<main>
-		<header></header>
-		<content>
-			<div class="window">
-				<div class="header">
-					<i class="red dot"></i>
-					<i class="yellow dot"></i>
-					<i class="green dot"></i>
-				</div>
-				<div class="editor">
-					<div class="bash-script" hx-get="mayer.sh.html" hx-trigger="load">
-						<noscript style="color: #70925a;">
-							<span>#!/bin/bash</span><br />
-							<br />
-							<span># Sieht so aus, als hättest du das ausführen von JavaScript deaktiviert.</span><br />
-							<span># Eigentlich werden hier mit <a style="color: lightseagreen;"
-									href="https://htmx.org">htmx</a> weiter Inhalte
-								geladen.</span><br />
-							<span># Wie auch immer, hier ein Link zu den Inhalten <a style="color: lightseagreen;"
-									href="mayer.sh.html">./mayer.sh.html</a><br />
-							</span>
-							<br />
-							<span># PS: mit JavaScript gäbe es auch eine Animation</span><br />
-							<br />
-						</noscript>
-					</div>
-				</div>
-			</div>
-		</content>
-		<footer>
-		</footer>
-	</main>
-</body>
-
-</html>
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mayer.sh</title>
+<meta name="description" content="Bash script to print information about the author">
+<link rel="preload" as="fetch" crossorigin="anonymous" href="/_payload.json">
+<style>.background[data-v-a1a724ee]{bottom:calc(var(--size)*-.65);left:calc(var(--size)*-.65);position:fixed;z-index:-1;--unit:calc(max(1vw, 1vh));--size:calc(var(--unit)*500);height:var(--size);width:var(--size)}.background[data-v-a1a724ee]:before{animation:backg-a1a724ee 200s linear infinite;background-color:#f786f7;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3ClinearGradient id='a' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='5%25' stop-color='%23e386e1'/%3E%3Cstop offset='25%25' stop-color='%236f7de3'/%3E%3Cstop offset='40%25' stop-color='%23eb88bd'/%3E%3Cstop offset='60%25' stop-color='%23ede4be'/%3E%3Cstop offset='80%25' stop-color='%23b3de7e'/%3E%3Cstop offset='100%25' stop-color='%2355c9be'/%3E%3C/linearGradient%3E%3Ccircle cx='150' cy='150' r='150' fill='url(%23a)' stroke='url(%23a)' stroke-width='4' class='external-circle'/%3E%3C/svg%3E");background-size:100%;bottom:0;content:"";left:0;position:absolute;right:0;top:0;z-index:-1}@keyframes backg-a1a724ee{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.main[data-v-a1a724ee]{font-family:Courier New,Arial}.main[data-v-a1a724ee],.window[data-v-a1a724ee]{margin:auto;max-width:50em}.window[data-v-a1a724ee]{background-color:#252525;border-radius:.4em;color:#fff;overflow:hidden}.window .editor[data-v-a1a724ee]{margin:.5em;overflow-x:auto}.window .header[data-v-a1a724ee]{background-color:#323232;padding:.2em 0 0 .4em}.window .header .dot[data-v-a1a724ee]{aspect-ratio:1;border-radius:50%;display:inline-block;margin-right:.3em;width:.7em}.window .header .red.dot[data-v-a1a724ee]{background-color:#ec6b5f}.window .header .yellow.dot[data-v-a1a724ee]{background-color:#f5bf4f}.window .header .green.dot[data-v-a1a724ee]{background-color:#63c856}.footer[data-v-a1a724ee]{color:#f5f5f5;font-weight:700;margin:1.5em .5em}.footer ul[data-v-a1a724ee]{list-style-type:none}</style>
+<style>.code[data-v-9099bda4]{color:#fff;font-family:monospace;font-size:14px;white-space:nowrap}.code .nop[data-v-9099bda4],.command[data-v-9099bda4],.comment[data-v-9099bda4],.param[data-v-9099bda4],.value[data-v-9099bda4]{display:inline-block}.code .nop[data-v-9099bda4]{color:#fff}.code .command[data-v-9099bda4]{color:#d7d7ab}.code .value[data-v-9099bda4]{color:#c5947c}.code .param[data-v-9099bda4]{color:#679ad1}.code .comment[data-v-9099bda4]{color:#70925a}.command[data-v-9099bda4],.comment[data-v-9099bda4],.nop[data-v-9099bda4],.param[data-v-9099bda4],.value[data-v-9099bda4]{animation-delay:calc(var(--prev)*.01s);-webkit-animation-delay:calc(var(--prev)*.01s);animation-duration:calc(var(--chars)*.01s);-webkit-animation-duration:calc(var(--chars)*.01s);animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;animation-name:typing-9099bda4;-webkit-animation-name:typing-9099bda4;overflow:hidden;width:0}@keyframes typing-9099bda4{0%{width:0}to{width:calc(var(--chars)*1ch)}}</style>
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/entry.DM5793f9.js">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/index.Ct6ZXBRz.js">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/vue.f36acd1f.36yJuEE4.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/error-404.j07r7r2A.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/error-500.CvLgnCZL.js">
+<script type="module" src="/_nuxt/entry.DM5793f9.js" crossorigin></script></head><body><div id="__nuxt"><div><!--[--><div data-v-a1a724ee><div class="background" data-v-a1a724ee></div><div class="main" data-v-a1a724ee><div class="header" data-v-a1a724ee></div><div class="window" data-v-a1a724ee><div class="header" data-v-a1a724ee><i class="red dot" data-v-a1a724ee></i><i class="yellow dot" data-v-a1a724ee></i><i class="green dot" data-v-a1a724ee></i></div><div class="editor" data-v-a1a724ee><div class="bash-script" hx-get="mayer.sh.html" hx-trigger="load" data-v-a1a724ee><span class="code" data-v-a1a724ee data-v-9099bda4><div class="comment" data-v-9099bda4>#!/bin/bash</div><br data-v-9099bda4><br data-v-9099bda4><div class="comment" data-v-9099bda4> # -------------------------------------------------------- </div><br data-v-9099bda4><div class="comment" data-v-9099bda4># Script: mayer.sh</div><br data-v-9099bda4><div class="comment" data-v-9099bda4> # Description: prints information about the author </div><br data-v-9099bda4><div class="comment" data-v-9099bda4># Usage: ./mayer.sh</div><br data-v-9099bda4><div class="comment" data-v-9099bda4># Author: Kai Mayer &lt;kai@mayer.sh&gt;</div><br data-v-9099bda4><div class="comment" data-v-9099bda4># Version: 0.0.1</div><br data-v-9099bda4><div class="comment" data-v-9099bda4># Date: 2023-09-07</div><br data-v-9099bda4><div class="comment" data-v-9099bda4> # -------------------------------------------------------- </div><br data-v-9099bda4><br data-v-9099bda4><div class="command" data-v-9099bda4>echo </div><div class="value" data-v-9099bda4>&quot;Willkommen auf meiner Website!&quot;</div><br data-v-9099bda4><div class="command" data-v-9099bda4>curl </div><div class="value" data-v-9099bda4><a style="color:inherit;" href="mayer.sh" data-v-9099bda4>https://mayer.sh/mayer.sh </a></div><div class="param" data-v-9099bda4>-o </div><div class="value" data-v-9099bda4>mayer.sh </div><div class="nop" data-v-9099bda4>&amp;&amp; </div><div class="command" data-v-9099bda4>bash </div><div class="value" data-v-9099bda4>./mayer.sh</div><br data-v-9099bda4><br data-v-9099bda4><div class="comment" data-v-9099bda4># Key ID: 7FE1E0CD</div><br data-v-9099bda4><div class="comment" data-v-9099bda4># Key Type: RSA</div><br data-v-9099bda4><div class="comment" data-v-9099bda4># Expires: 2027-07-11</div><br data-v-9099bda4><div class="comment" data-v-9099bda4># Key Size: 4096/4096</div><br data-v-9099bda4><div class="comment" data-v-9099bda4> # Fingerprint: 2C23 48A2 C4AD F105 DC46  65E0 2E6F AD54 7FE1 E0CD </div><br data-v-9099bda4><div class="command" data-v-9099bda4>curl </div><div class="value" data-v-9099bda4><a style="color:inherit;" href="kai@mayer.sh.asc" data-v-9099bda4>https://mayer.sh/kai@mayer.sh.asc</a></div><br data-v-9099bda4><br data-v-9099bda4><div class="comment" data-v-9099bda4># ...</div><br data-v-9099bda4><br data-v-9099bda4></span></div></div></div><div class="footer" data-v-a1a724ee></div></div></div><!--]--></div></div><script type="application/json" id="__NUXT_DATA__" data-ssr="true" data-src="/_payload.json">[{"state":1,"once":3,"_errors":5,"serverRendered":7,"path":8,"prerenderedAt":9},["Reactive",2],{},["Reactive",4],["Set"],["Reactive",6],{},true,"/",1707820150135]</script>
+<script>window.__NUXT__={};window.__NUXT__.config={public:{},app:{baseURL:"/",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>
