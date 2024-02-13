@@ -14,4 +14,9 @@ jobs:
       MESSAGE: "Build: ({sha}) {msg}"
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+      - run: yarn install
+      - run: yarn generate
       - uses: s0/git-publish-subdir-action@develop

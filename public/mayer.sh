@@ -18,8 +18,8 @@ echo "
 | Description: prints useless information about the author    |
 | Usage:       ./mayer.sh                                     |
 | Author:      Kai Mayer <kai@mayer.sh>                       |
-| Version:     0.0.1                                          |
-| Date:        2023-09-07                                     |
+| Version:     0.0.2                                          |
+| Date:        2024-02-13                                     |
 |                                                             |
 +-------------------------------------------------------------+
 "
