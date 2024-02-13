@@ -1,0 +1,29 @@
+<template>
+  <div class="main">
+    <h1>📚 Blog</h1>
+    <ContentList :query="{ path: '/blog' }">
+      <template #default="{ list }">
+        <div v-for="article in list">
+          <i>{{ new Date(article.date).toDateString() }}</i>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <nuxt-link :to="article._path">{{ article.title }}</nuxt-link>
+        </div>
+      </template>
+      <template #not-found>
+        <span>No blog articels found!</span>
+      </template>
+    </ContentList>
+    <br />
+    <br />
+    <div>
+      <span>🧑🏼‍💻&nbsp;<a href="/blog/rss.xml" target="_blank">RSS Feed</a></span>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.main {
+  margin: auto;
+  max-width: 800px;
+}
+</style>

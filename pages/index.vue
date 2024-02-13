@@ -41,7 +41,18 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="footer"></div>
+      <div class="footer">
+        <span>
+          🔔&nbsp;<nuxt-link to="https://dieklingel.de/">dieKlingel</nuxt-link>
+        </span>
+        <span> 📚&nbsp;<nuxt-link to="/blog">Blog</nuxt-link> </span>
+        <span>
+          📫&nbsp;<nuxt-link to="mailto:kai@mayer.sh">Get in touch</nuxt-link>
+        </span>
+        <span>
+          🐙&nbsp;<nuxt-link to="https://github.com/koifresh">GitHub</nuxt-link>
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -128,12 +139,17 @@ onMounted(() => {
 }
 
 .footer {
-  margin: 1.5em 0.5em;
+  margin: 0.5em 0;
   font-weight: 700;
   color: whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5em;
+  flex-wrap: wrap;
 }
 
-.footer ul {
-  list-style-type: none;
+.footer > * {
+  padding: 0.1em;
+  text-align: center;
 }
 </style>
