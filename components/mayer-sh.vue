@@ -39,7 +39,7 @@ onMounted(() => {
     <br />
     <div class="comment"># Version: 0.0.1</div>
     <br />
-    <div class="comment"># Date: 2023-09-07</div>
+    <div class="comment"># Date: 2024-02-13</div>
     <br />
     <div class="comment">
       # --------------------------------------------------------
