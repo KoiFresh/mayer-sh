@@ -4,8 +4,7 @@
     <ContentList :query="{ path: '/blog' }">
       <template #default="{ list }">
         <div v-for="article in list">
-          <i>{{ new Date(article.date).toDateString() }}</i>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <i class="date">{{ new Date(article.date).toDateString() }}</i>
           <nuxt-link :to="article._path">{{ article.title }}</nuxt-link>
         </div>
       </template>
@@ -24,6 +23,12 @@
 <style scoped>
 .main {
   margin: auto;
+  padding: 0 0.5em;
   max-width: 800px;
+}
+
+.date {
+  display: inline-block;
+  min-width: 9em;
 }
 </style>
