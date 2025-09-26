@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
 	const feed = new RSS({
 		title: 'mayer.sh - blog',
 		site_url: 'https://mayer.sh/',
-		feed_url: 'https://mayer.sh/rss.xml'
+		feed_url: 'https://mayer.sh/blog/rss.xml'
 	});
 
 	const posts = await serverQueryContent(event)

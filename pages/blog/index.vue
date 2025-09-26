@@ -1,9 +1,9 @@
 <template>
   <div class="main">
     <h1>📚 Blog</h1>
-    <ContentList :query="{ path: '/blog' }">
+    <ContentList :query="{ path: '/blog', sort: [{ date: -1 }] }">
       <template #default="{ list }">
-        <div v-for="article in list">
+        <div v-for="article in list" :key="article._id">
           <i class="date">{{ new Date(article.date).toDateString() }}</i>
           <nuxt-link :to="article._path">{{ article.title }}</nuxt-link>
         </div>
